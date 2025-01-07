@@ -31,6 +31,6 @@ class CategoriesController extends Controller
         }catch(QueryException $e){
             throw new \Error('La categoria tiene registros relacionados');
         }
-        return response()->json(['successfully removed'], 201);
+        return response()->json(['successfully removed']);
     }
 }

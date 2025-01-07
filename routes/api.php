@@ -13,11 +13,11 @@ Route::get('/user', function (Request $request) {
 Route::prefix('/crud')->group(function (){
     Route::get('all', [CrudController::class, 'all']);
     Route::post('store', [CrudController::class, 'store']);
-    Route::put('remove', [CrudController::class, 'remove']);
+    Route::delete('remove', [CrudController::class, 'remove']);
 });
 
 Route::prefix('/categories')->group(function (){
     Route::get('all', [CategoriesController::class, 'all']);
     Route::post('store', [CategoriesController::class, 'store']);
-    Route::put('remove', [CategoriesController::class, 'remove']);
+    Route::delete('remove', [CategoriesController::class, 'remove']);
 });

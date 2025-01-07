@@ -34,6 +34,6 @@ class CrudController extends Controller
     public function remove(Request $req){
         $info = Products::find($req->id, ['id']);
         $info->delete();
-        return response()->json(['successfully removed'], 201);
+        return response()->json(['successfully removed']);
     }
 }
